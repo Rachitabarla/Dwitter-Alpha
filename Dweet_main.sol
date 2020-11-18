@@ -1,7 +1,11 @@
 pragma solidity >=0.5.0;
 
 contract DweetSent {
-
+     struct Dweet 
+     {
+        uint timestamp;
+		string dweetString;
+     }
     struct User {
         uint age;
         string EthAddress;
