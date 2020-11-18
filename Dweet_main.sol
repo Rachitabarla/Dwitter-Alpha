@@ -28,4 +28,15 @@ contract DweetSent {
         require(msg.sender == owner);
         _;
     }
+     event DweetCreated(
+        uint timestamp,
+        string dweetString);
+        
+    function createDweet(string memory _dweetString) public{
+       DweetCount++;
+       timestamp = now;
+       MyDweets[DweetCount] = Dweet(timestamp,_dweetString);
+       emit DweetCreated(timestamp,_dweetString);
+       }
+
 }
