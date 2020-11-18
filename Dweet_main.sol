@@ -4,7 +4,7 @@ contract DweetSent {
      struct Dweet 
      {
         uint timestamp;
-		string dweetString;
+	string dweetString;
      }
     struct User {
         uint age;
