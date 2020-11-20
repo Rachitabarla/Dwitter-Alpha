@@ -37,7 +37,7 @@ contract DweetSent {
         uint timestamp,
         string dweetString);
         
-    function createDweet(string memory _dweetString) public{
+    function createDweet(string memory _dweetString) public onlyOwner{
        DweetCount++;
        timestamp = block.timestamp;
        MyDweets[DweetCount] = Dweet(timestamp,_dweetString);
