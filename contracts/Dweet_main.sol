@@ -3,10 +3,16 @@ pragma solidity >=0.5.1;
 contract DweetSent {
     uint public DweetCount;
     uint256 public timestamp;
+    
      struct Dweet 
-     {
-        uint256 timestamp;
-	    string dweetString;
+     {   uint id;
+         uint256 timestamp;
+	 string dweetString;
+	 uint likes;
+	 uint reports;
+	 bool status;
+	//to hide the deleted dweets
+	 
      }
     struct User {
         uint age;
