@@ -6,6 +6,7 @@ contract DweetSent {
      {
         uint timestamp;
 	string dweetString;
+	address dweetAuthor;
      }
     struct User {
         uint age;
@@ -28,4 +29,11 @@ contract DweetSent {
         require(msg.sender == owner);
         _;
     }
+    uint private totalDweetsCount;
+    Dweet[] public RepoDweets;
+    
+    mapping (address => uint[]) public dweets_via_author;
+    
+    
+    
 }
