@@ -34,6 +34,20 @@ contract DweetSent {
     
     mapping (address => uint[]) public dweets_via_author;
     
+     function createDweet(string memory _text) public returns (bool) {
+        require (isUser(msg.sender) == true);
+        uint dweet_index;
+        dweet_index = all_dweets.push(Dweet(_text, msg.sender))-1;
+
+        uint _count = users[msg.sender].my_dweet_count;
+        users[msg.sender].my_dweets[_count] = Dweet(_text, msg.sender);
+        users[msg.sender].my_dweet_count ++;
+
+        users[msg.sender].my_dweets_array.push(Dweet(_text, msg.sender));
+
+        return true;
+    }
+    
     
     
 }
