@@ -8,6 +8,9 @@ contract DweetSent {
 	string dweetString;
 	address dweetAuthor;
 	string dweet_tags;
+	 uint likes;
+	 uint reports;
+	 bool status;
 	
      }
     struct User {
