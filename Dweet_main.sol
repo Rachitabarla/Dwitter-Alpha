@@ -45,7 +45,7 @@ contract DweetSent {
     function isUser(address Address) public view returns (bool yesIsUser){
         if(userindex.length == 0) return false;
         return (userindex[users[Address].index] == Address); 
-    
+    }
      function addUser (string memory _EthAddress, uint _age) public returns (bool success)  {
         address Address = msg.sender;
         require(isUser(Address) == false); 
